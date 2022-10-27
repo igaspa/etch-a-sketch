@@ -12,13 +12,17 @@
 <body>
     <h1>Etch A Sketch</h1>
     <div id='buttons'>
-        <button id='tenPix' value='10'>10x10</button>
+        <!-- <button id='tenPix' value='10'>10x10</button>
         <button id='twentyPix' value='20'>20x20</button>
-        <button id='thirtyPix' value='30'>30x30</button>
+        <button id='thirtyPix' value='30'>30x30</button> -->
         <button id='deleteButton' value='erase'>Erase</button>
         <button id='colorButton' value='rainbow'>Rainbow</button>
         <button id='blackButton' value='black'>Black</button>
         <button id='resetButton' value='reset'>Reset</button>
+    </div>
+    <div class='slidecontainer'>
+        <p>Pixel size: <span id='output'></span> </p>
+        <input type='range' min='1' max='100' value='50' class='slider' id='pixSize'>
     </div>
     <div id='mainField'>
     </div>

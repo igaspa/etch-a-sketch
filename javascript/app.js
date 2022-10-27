@@ -11,9 +11,9 @@ const resetBtn = document.querySelector('#resetButton')
 
 let gridContainer = document.querySelector('#mainField');
 
-tenBtn.addEventListener('click', pixelSize)
-twentyBtn.addEventListener('click', pixelSize)
-thirtyBtn.addEventListener('click', pixelSize)
+// tenBtn.addEventListener('click', pixelSize)
+// twentyBtn.addEventListener('click', pixelSize)
+// thirtyBtn.addEventListener('click', pixelSize)
 
 deleteBtn.addEventListener('click', setMode);
 blackBtn.addEventListener('click', setMode);
@@ -30,6 +30,8 @@ function makeRows(rows, cols) {
         gridContainer.appendChild(cell);
     };
 };
+makeRows(50, 50)
+/*Button to change pixels, old
 makeRows(10, 10);
 function pixelSize(event) {
     const pixSize = event.target.value;
@@ -39,8 +41,7 @@ function pixelSize(event) {
         makeRows(20, 20)
     else
         makeRows(30, 30)
-}
-
+} */
 function setMode(event) {
     mode = event.target.value;
     if (mode === 'erase')
@@ -62,11 +63,21 @@ function changeColor(event) {
         event.target.style.backgroundColor = CONST_COLOR
     }
 }
+let slider = document.querySelector('#pixSize');
+let output = document.querySelector('#output');
+output.innerHTML = slider.value;
+let cellValue = slider.value;
+
+slider.oninput = function () {
+    output.innerHTML = this.value
+    cellValue = this.value
+    makeRows(cellValue, cellValue);
+}
 
 function reset() {
     const cells = document.querySelectorAll('.cell')
     cells.forEach(box => {
         box.style.backgroundColor = 'white';
     });
-    // }
 }
+
