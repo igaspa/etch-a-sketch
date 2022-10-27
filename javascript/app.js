@@ -11,10 +11,6 @@ const resetBtn = document.querySelector('#resetButton')
 
 let gridContainer = document.querySelector('#mainField');
 
-// tenBtn.addEventListener('click', pixelSize)
-// twentyBtn.addEventListener('click', pixelSize)
-// thirtyBtn.addEventListener('click', pixelSize)
-
 deleteBtn.addEventListener('click', setMode);
 blackBtn.addEventListener('click', setMode);
 colorBtn.addEventListener('click', setMode);
@@ -31,17 +27,7 @@ function makeRows(rows, cols) {
     };
 };
 makeRows(50, 50)
-/*Button to change pixels, old
-makeRows(10, 10);
-function pixelSize(event) {
-    const pixSize = event.target.value;
-    if (pixSize === '10')
-        makeRows(10, 10)
-    else if (pixSize === '20')
-        makeRows(20, 20)
-    else
-        makeRows(30, 30)
-} */
+
 function setMode(event) {
     mode = event.target.value;
     if (mode === 'erase')
