@@ -27,7 +27,8 @@ button {
 
 h1 {
     font-family: 'Coda Caption', sans-serif;
-    font-size: 50px margin: 20px;
+    font-size: 30px;
+    margin: 20px;
 }
 
 #output {
