@@ -10,25 +10,23 @@ body {
 
 #mainField {
     display: grid;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     border: 5px solid #511F50;
     background-color: #E0FFF7;
-    margin: 5px
 }
 
 button {
     background-color: #511F50;
-    width: 80px;
     height: 25px;
     font-family: 'Coda Caption', sans-serif;
-    font-size: 13px
+    font-size: 13px;
 }
 
 h1 {
     font-family: 'Coda Caption', sans-serif;
     font-size: 30px;
-    margin: 20px;
+    margin: 10px
 }
 
 #output {
@@ -39,7 +37,7 @@ h1 {
 .slidecontainer {
     display: grid;
     justify-items: center;
-    grid-template-columns: 0.2fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .slider {
@@ -61,11 +59,11 @@ h1 {
     cursor: pointer;
 }
 
-#game {
+#controls {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
     align-items: center;
 }
 
@@ -78,5 +76,17 @@ h1 {
     display: grid;
     margin: 10px;
     justify-items: center;
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+@media (max-width: 400px) {
+    #controls {
+        display: grid;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
