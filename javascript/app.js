@@ -8,6 +8,8 @@ const tenBtn = document.querySelector('#tenPix')
 const twentyBtn = document.querySelector('#twentyPix')
 const thirtyBtn = document.querySelector('#thirtyPix')
 const resetBtn = document.querySelector('#resetButton')
+const slider = document.querySelector('#pixSize');
+const output = document.querySelector('#output');
 
 let gridContainer = document.querySelector('#mainField');
 
@@ -31,7 +33,7 @@ makeRows(50, 50)
 function setMode(event) {
     mode = event.target.value;
     if (mode === 'erase')
-        CONST_COLOR = 'white'
+        CONST_COLOR = '#E0FFF7'
     else if (mode === 'rainbow') {
         let randomColor = Math.floor(Math.random() * 0xFFFFFF).toString(16);
         CONST_COLOR = `#${randomColor}`
@@ -49,8 +51,7 @@ function changeColor(event) {
         event.target.style.backgroundColor = CONST_COLOR
     }
 }
-let slider = document.querySelector('#pixSize');
-let output = document.querySelector('#output');
+
 output.innerHTML = slider.value;
 let cellValue = slider.value;
 
@@ -63,7 +64,7 @@ slider.oninput = function () {
 function reset() {
     const cells = document.querySelectorAll('.cell')
     cells.forEach(box => {
-        box.style.backgroundColor = 'white';
+        box.style.backgroundColor = '#E0FFF7';
     });
 }
 
